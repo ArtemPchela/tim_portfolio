@@ -32,8 +32,8 @@
       "@/styles/*": [
         "styles/*"
       ],
-      "@/font/*": [
-        "font/*"
+      "@/fonts/*": [
+        "fonts/*"
       ]
     }
   },

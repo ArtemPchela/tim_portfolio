@@ -26,7 +26,10 @@ const Home: FC = () => {
         <div className={styles.download}>
 
           <a
-            href='../helpers/pdf/CV_ARTSIOM_PCHALIANKOU_V8.1.pdf' download='CV_ARTSIOM_PCHALIANKOU_V8.1.pdf'
+            href='/files/artsiom_pchaliankou.pdf'
+            target="_blank"
+            rel="noopener noreferrer"
+            download
             className={styles.download_link}
           >
             <span className={styles.download_link_icon}><FaDownload /></span>{' '}
