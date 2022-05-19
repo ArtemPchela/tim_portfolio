@@ -1,0 +1,127 @@
+@use "../../styles/mixins";
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0 var(--body-horizontal-padding);
+  background-color: var(--color-background-alt);
+  transition: background-color var(--transition-color);
+  --header-height: 85px;
+
+  &_container {
+    @include mixins.container;
+    display: flex;
+    justify-content: space-between;
+
+    .nav_menu {
+      ul {
+        li {
+          font-weight: 700;
+          letter-spacing: 0.055rem;
+          a {
+            padding: 0.5rem;
+            color: var(--color-text-home);
+
+            &.active_link,
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+
+    .nav_btn {
+      display: flex;
+      align-items: center;
+    }
+
+    @include mixins.max-width-query(md) {
+      &::before {
+        content: '';
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height);
+        background-color: var(--color-background-alt);
+        transition: background-color var(--transition-color);
+      }
+
+      .nav_menu {
+        z-index: -2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.25rem 1.5rem 2rem;
+        background-color: var(--color-background-alt);
+        box-shadow: 0 -1px 4px rgb(0 0 0 / 15%);
+        transform: translateY(calc(-100vh + var(--header-height)));
+        transition: transform 400ms ease-in-out;
+
+        &.open {
+          transform: translateY(var(--header-height));
+        }
+
+        &.close {
+          ul li a {
+            animation: hide-visibility 400ms ease-in-out forwards;
+
+            @keyframes hide-visibility {
+              99% {
+                visibility: visible;
+              }
+
+              100% {
+                visibility: hidden;
+              }
+            }
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    @include mixins.min-mq(md) {
+      .nav_menu {
+        display: flex;
+        margin-left: auto;
+        margin-right: 0.25rem;
+
+        ul {
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+        }
+      }
+    }
+
+    @include mixins.min-mq(lg) {
+      .nav_menu {
+        ul {
+          column-gap: 1rem;
+
+          li a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

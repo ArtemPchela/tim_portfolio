@@ -1,0 +1,43 @@
+@use 'sass:map';
+
+// Min-width media query
+$minBreakpoints: (
+        sm: 36em,
+        md: 48em,
+        lg: 62em,
+        xl: 75em,
+        xxl: 87.5em,
+);
+
+@mixin min-mq($key) {
+  $size: map.get($minBreakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Max-width media query
+$offset: 0.00125em;
+
+$maxBreakpoints: (
+        sm: 36em - $offset,
+        md: 48em - $offset,
+        lg: 62em - $offset,
+        xl: 75em - $offset,
+        xxl: 87.5em - $offset,
+);
+
+@mixin max-width-query($key) {
+  $size: map.get($maxBreakpoints, $key);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+}

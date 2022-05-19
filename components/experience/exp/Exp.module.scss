@@ -1,0 +1,124 @@
+@use "../../../styles/mixins";
+
+.experience_wrapper {
+  position: relative;
+  padding: 3.125rem 0;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    margin-left: -0.135rem;
+    width: 0.31rem;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+
+  //&::after {
+  //  position: absolute;
+  //  content: "";
+  //  top: 0;
+  //  left: 50%;
+  //  margin-left: -.04rem;
+  //  width: 0.1rem;
+  //  height: 100%;
+  //  border-radius: 50%;
+  //  background-color: red;
+  //  animation: blinkingBackground 4s infinite;
+  //  z-index: 1;
+  //}
+}
+
+.timeline_block {
+  width: calc(50% + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+  direction: rtl;
+  text-align: right;
+}
+
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  animation: blinkingBackground 4s infinite;
+  z-index: 3;
+}
+
+//animation for blinking timeline dots
+@keyframes blinkingBackground {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.timeline_content {
+  width: 95%;
+  padding: 0 0.9375rem;
+  direction: ltr;
+
+  .year,
+  .company,
+  .position {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+
+  .year {
+
+  }
+
+  .company {
+    color: var(--color-primary);
+  }
+
+  .position {
+    color: var(--color-text-home)
+  }
+}
+
+@include mixins.max-width-query(md) {
+  .container {
+    padding-left: 0;
+  }
+
+  .experience_wrapper {
+    &::before {
+      left: 0.5rem;
+    }
+
+    &::after {
+      left: 0.5rem;
+    }
+  }
+
+  .timeline_block {
+    width: 100%;
+  }
+
+  .right {
+    float: none;
+  }
+
+  .left {
+    float: none;
+    direction: ltr;
+    text-align: left;
+  }
+}

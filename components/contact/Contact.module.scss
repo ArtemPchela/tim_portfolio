@@ -1,0 +1,39 @@
+@use "../../styles/mixins";
+
+.contact {
+  padding: 65px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include mixins.min-mq(md) {
+      flex-direction: row;
+    }
+
+    a {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--color-text-normal);
+      display: flex;
+      gap: 0.5em;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .copy {
+    border-top: 2px solid var(--color-text-normal);
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: .7rem;
+
+    &_sign {
+      color: white;
+    }
+  }
+}

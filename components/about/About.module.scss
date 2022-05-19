@@ -1,0 +1,23 @@
+@use '../../styles/mixins';
+
+.about {
+  padding: 65px 0 30px;
+
+  .container {
+    display: grid;
+    column-gap: 2rem;
+
+    @include mixins.min-mq(sm) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+    }
+
+    .about_text {
+      & > * {
+        //fonts-size: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

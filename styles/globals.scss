@@ -1,0 +1,164 @@
+@use 'mixins';
+
+/* Fonts */
+/* anek-gurmukhi-v2-latin-400*/
+@font-face {
+  font-family: 'Anek Gurmukhi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/anek-gurmukhi-v2-latin-400.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('../fonts/anek-gurmukhi-v2-latin-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/anek-gurmukhi-v2-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-400.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-400.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/anek-gurmukhi-v2-latin-400.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
+}
+
+/* anek-gurmukhi-v2-latin-500 - latin */
+@font-face {
+  font-family: 'Anek Gurmukhi';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/anek-gurmukhi-v2-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('../fonts/anek-gurmukhi-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/anek-gurmukhi-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/anek-gurmukhi-v2-latin-500.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
+}
+
+/* anek-gurmukhi-v2-latin-600 */
+@font-face {
+  font-family: 'Anek Gurmukhi';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/anek-gurmukhi-v2-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('../fonts/anek-gurmukhi-v2-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/anek-gurmukhi-v2-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-600.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/anek-gurmukhi-v2-latin-600.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
+}
+
+/* anek-gurmukhi-v2-latin-700 */
+@font-face {
+  font-family: 'Anek Gurmukhi';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/anek-gurmukhi-v2-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('../fonts/anek-gurmukhi-v2-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/anek-gurmukhi-v2-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/anek-gurmukhi-v2-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/anek-gurmukhi-v2-latin-700.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
+}
+
+/* CSS Variables */
+:root {
+  /*Colors*/
+  /*Hover*/
+  --color-primary: #aede23;
+
+  /*Scroll*/
+  --color-scroll-thumb: #ffffff;
+  //--color-scroll-thumb-hover: #aede23;
+  /*Header*/
+  --color-background-alt: #2F2D2E;
+
+  /*Title*/
+  --color-text-home: #ffffff;
+
+  /*Greeting*/
+  --color-text-subheading: #aede23;
+
+  /*Profession description*/
+  --color-text-normal: #60d4ee;
+
+  /*Background body*/
+  --color-background: #2E2E3A;
+  --transition-color: 5 linear;
+
+  /* Fonts */
+  --font-family-body: 'Anek Gurmukhi', 'San Francisco', 'SF Pro Text', -apple-system,
+  system-ui, sans-serif;
+
+  /*********** Padding ***********/
+  --body-horizontal-padding: 1.5rem;
+
+  @include mixins.min-mq(md) {
+    --body-horizontal-padding: 3rem;
+  }
+
+  @include mixins.min-mq(lg) {
+    --body-horizontal-padding: 6rem;
+  }
+
+  @include mixins.min-mq(xl) {
+    --body-horizontal-padding: 10rem;
+  }
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-background);
+  color: var(--color-text-normal);
+  transition: background-color var(--transition-color),
+  color var(--transition-color);
+  overflow-x: hidden;
+}
+
+main {
+  padding: 0 var(--body-horizontal-padding);
+
+  section {
+    @include mixins.container;
+  }
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background-color: var(--color-selection-background);
+  color: var(--color-selection-text);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scroll-thumb);
+  border-radius: 0.5rem;
+}

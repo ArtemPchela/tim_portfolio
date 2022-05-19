@@ -1,0 +1,137 @@
+@use "../../../styles/mixins";
+
+.project {
+  .project_wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+    .project_content {
+      grid-area: 1 / 1 / -1 / 7;
+      grid-column: 1 / -1;
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      gap: 1em;
+
+      &_title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: var(--color-text-heading);
+
+        &:hover,
+        &:focus-visible {
+          color: var(--color-primary);
+        }
+      }
+
+      &_description {
+        background-color: var(--color-background-alt);
+        border-radius: 4px;
+        padding: 1.5rem;
+      }
+
+      &_tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-style: italic;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        a {
+          color: var(--color-text-normal);
+          display: flex;
+          font-size: 1.25rem;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+
+    .project_image {
+      grid-area: 1 / 6 / -1 / -1;
+      grid-column: 1 / -1;
+      position: relative;
+      height: 100%;
+
+      & > div {
+        position: static !important;
+        height: 100%;
+
+        & > img {
+          position: static !important;
+          border-radius: 4px;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+
+    @include mixins.min-mq(sm) {
+      .project_content {
+        padding: 0;
+        grid-column: 6 / -1;
+        text-align: right;
+        align-items: flex-end;
+      }
+
+      .project_image {
+        grid-column: 1 / 8;
+        filter: blur(.325rem);
+        -webkit-filter: blur(.325rem);
+        -moz-filter: blur(.325rem);
+        transition: width 30s;
+
+        &:hover {
+          -webkit-filter: blur(0rem);
+        }
+      }
+    }
+
+    @include mixins.min-mq(xl) {
+      .project_content {
+        grid-column: 7 / -2;
+      }
+
+      .project_image {
+        grid-column: 2 / 8;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .project_wrapper {
+      @include mixins.min-mq(sm) {
+        .project_content {
+          grid-column: 1 / 8;
+          text-align: left;
+          align-items: flex-start;
+        }
+
+        .project_image {
+          grid-column: 6 / -1;
+        }
+      }
+
+      @include mixins.min-mq(xl) {
+        .project_content {
+          grid-column: 2 / 7;
+        }
+
+        .project_image {
+          grid-column: 6 / -2;
+        }
+      }
+    }
+  }
+}

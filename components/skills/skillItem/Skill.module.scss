@@ -1,0 +1,33 @@
+.skill_item {
+  //min-width: 10rem;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--color-text-home);
+  }
+
+  ul {
+    margin-top: 1rem;
+
+    li {
+      font-size: 1.2rem;
+
+      &::before,
+      &::after {
+        color: var(--color-text-home);
+        padding: 0 0.2em;
+      }
+
+      &::before {
+        content: '<';
+        font-size: 1rem;
+      }
+
+      &::after {
+        content: '/>';
+        font-size: 1rem;
+      }
+    }
+  }
+}

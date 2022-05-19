@@ -1,0 +1,16 @@
+@use '../../styles/mixins';
+
+.skills {
+  padding: 65px 0 30px;
+  .skill_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+
+    @include mixins.min-mq(sm) {
+      flex-direction: row;
+    }
+  }
+}
