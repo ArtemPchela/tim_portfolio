@@ -25,9 +25,13 @@
             padding: 0.5rem;
             color: var(--color-text-home);
 
-            &.active_link,
-            &:hover {
+            &.active_link {
               color: var(--color-primary);
+            }
+
+            &:hover {
+              transition: 2ms ease-in;
+              border-bottom: 0.125rem solid var(--color-primary);
             }
           }
         }

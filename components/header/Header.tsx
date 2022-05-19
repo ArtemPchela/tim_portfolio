@@ -14,7 +14,7 @@ const Header: FC = () => {
     query: '(min-width: 48em)'
   })
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev)
+  const toggleMenu = () => setMenuOpen((prevState) => !prevState)
 
   const handleClickNav = (event: MouseEvent<HTMLAnchorElement>) => {
     const href = (event.target as HTMLAnchorElement).getAttribute('href')!

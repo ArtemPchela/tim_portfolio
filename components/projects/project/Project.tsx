@@ -55,7 +55,9 @@ const Project: FC<ProjectProps> = (props) => {
             loading='eager'
             src={screen}
             alt={`${title} image`}
-            layout="fill"
+            width={700}
+            height={500}
+            // layout="fill"
             objectFit='cover'
           />
         </a>
