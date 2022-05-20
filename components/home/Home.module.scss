@@ -9,14 +9,14 @@
   align-items: center;
 
   &_greeting {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--color-text-subheading);
   }
 
   .title {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.1vw, 2.5rem);
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 0.25rem;
@@ -24,7 +24,7 @@
   }
 
   .subtitle {
-    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -32,7 +32,7 @@
   }
 
   .greet {
-    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1.5rem;

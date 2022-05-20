@@ -10,6 +10,7 @@
   background-color: var(--color-background-alt);
   transition: background-color var(--transition-color);
   box-shadow: 0 0.025rem 0 0 var(--color-primary);
+  filter: drop-shadow(0 7px 7px rgba(0,0,0,0.7));
   --header-height: 85px;
 
   &_container {
