@@ -1,4 +1,6 @@
-export const expData = [
+import { ExperienceProps } from '@/components/experience/exp/Exp'
+
+export const experienceData: ExperienceProps[] = [
   {
     year: '2021 - 2022 (6 months)',
     company: 'SWEDCONE18 AB',

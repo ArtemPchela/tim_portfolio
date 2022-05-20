@@ -9,6 +9,7 @@
   padding: 0 var(--body-horizontal-padding);
   background-color: var(--color-background-alt);
   transition: background-color var(--transition-color);
+  box-shadow: 0 0.025rem 0 0 var(--color-primary);
   --header-height: 85px;
 
   &_container {
