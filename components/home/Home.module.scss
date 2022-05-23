@@ -55,7 +55,7 @@
 
       &_icon {
         svg {
-          animation: blinkingBackground 5s infinite;
+          animation: blinkingBackground 3s infinite ease-out alternate;
         }
       }
 
@@ -63,17 +63,8 @@
         0% {
           fill: var(--color-text-home);
         }
-        50% {
-          fill: var(--color-text-home);
-        }
         100% {
           fill: var(--color-primary);
-        }
-        50% {
-          fill: var(--color-text-home);
-        }
-        0% {
-          fill: var(--color-text-home);
         }
       }
 

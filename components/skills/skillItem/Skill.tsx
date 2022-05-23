@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import styles from './Skill.module.scss'
 
-type SkillsItemProps = {
+type SkillsProps = {
   title: string,
-  skills: string[]
+  skills: string[],
 }
 
-const Skill: FC<SkillsItemProps> = ({ title, skills }) => {
+const Skill: FC<SkillsProps> = ({ title, skills }) => {
   return (
     <div className={styles.skill_item}>
       <h2>{title}</h2>

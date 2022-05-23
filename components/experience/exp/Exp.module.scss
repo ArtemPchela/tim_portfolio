@@ -54,7 +54,7 @@
   height: 1rem;
   border-radius: 50%;
   border: 0.2rem solid white;
-  animation: blinkingBackground 4s infinite;
+  animation: blinkingBackground 3s infinite ease-out alternate;
   z-index: 3;
 }
 
@@ -65,6 +65,9 @@
   }
   100% {
     background-color: red;
+  }
+  0% {
+    background-color: white;
   }
 }
 
