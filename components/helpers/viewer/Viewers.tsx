@@ -6,7 +6,7 @@ const Viewers: FC = () => {
 
   const getViewers = async () => {
     try {
-      const counter = await axios.get(`https://api.countapi.xyz/update/artempchelenkov.xyz/${process.env.NEXT_PUBLIC_VIEWERS_COUNTER}/?amount=1`)
+      const counter = await axios.get(`https://api.countapi.xyz/update/artempchelenkov.xyz/b1c9d061-aae6-4537-8dbd-560a8265765d/?amount=1`)
       setViewers(counter.data.value)
     } catch (err) {
       console.log(err)
