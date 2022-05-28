@@ -1,7 +1,7 @@
 @use "../../styles/mixins";
 
 .contact {
-  padding: 65px 0;
+  padding: 65px 0 30px;
 
   .container {
     display: flex;
@@ -28,12 +28,40 @@
   .copy {
     border-top: 2px solid var(--color-text-normal);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 2rem;
     padding-top: .7rem;
 
-    &_sign {
-      color: white;
+    .viewers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &_icon {
+        margin-right: .2rem;
+      }
+    }
+
+    .made {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      &_creator {
+        font-size: 1rem;
+      }
+
+      &_sign {
+        font-size: .8rem;
+
+        &_c {
+          color: white;
+        }
+      }
+
     }
   }
+
 }

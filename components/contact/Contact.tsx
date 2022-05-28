@@ -3,6 +3,8 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Fade } from 'react-awesome-reveal'
 import Title from '@/components/helpers/title/Title'
 import styles from './Contact.module.scss'
+import { ImEyePlus } from 'react-icons/im'
+import Viewers from '@/components/helpers/viewer/Viewers'
 
 const Contact: FC = () => {
   const yearNow = new Date().getFullYear()
@@ -31,10 +33,19 @@ const Contact: FC = () => {
           </a>
         </div>
         <div className={styles.copy}>
-          <div>Created by Tim
-            <sup className={styles.copy_sign}>&#169;</sup>
-            {' '}
-            <span>{yearNow}</span>
+          <div className={styles.viewers}>
+            <div className={styles.viewers_icon}>
+              <ImEyePlus size='1.2rem' fill='white' />
+            </div>
+            <Viewers />
+          </div>
+          <div className={styles.made}>
+            <div className={styles.made_creator}>
+              Created by Tim
+            </div>
+            <div className={styles.made_sign}>
+              <p>Copyright<sup className={styles.made_sign_c}>&#169;</sup> {yearNow}</p>
+            </div>
           </div>
         </div>
       </Fade>

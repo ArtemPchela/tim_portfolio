@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import ReactGA from 'react-ga'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import Layout from '@/components/layout/Layout'
 import '@/styles/globals.scss'
+import ReactGA from 'react-ga'
 
 if (process.browser) {
   const TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_TRACKING_ID!
@@ -27,7 +27,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
             href={`/font/anek-gurmukhi-v2-latin-${weight}.woff2`}
             as='font'
             type='font/woff2'
-            crossOrigin="anonymous"
+            crossOrigin='anonymous'
           />
         ))}
         <title>Tim Front-end Developer</title>
