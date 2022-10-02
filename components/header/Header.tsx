@@ -6,6 +6,7 @@ import MobileMenu from '@/components/header/mobileMenu/MobileMenu'
 import Logo from '@/components/helpers/logo/Logo'
 import { mobileMenu } from '@/components/helpers/data/menuData'
 import useScrollActiveLink from '@/components/helpers/hooks/useScrollActiveLink'
+import Theme from '@/components/theme/Theme'
 
 const Header: FC = () => {
   useScrollActiveLink(styles.nav_menu, styles.active_link)
@@ -22,10 +23,14 @@ const Header: FC = () => {
     setMenuOpen(false)
   }
 
+  const closeOnClick = () => {
+    setMenuOpen(false)
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.header_container}>
-        <Fade triggerOnce duration={1000}>
+        <Fade duration={1000}>
           <Logo />
         </Fade>
         <nav
@@ -36,7 +41,6 @@ const Header: FC = () => {
           <Fade
             direction='down'
             cascade
-            triggerOnce
             damping={0.2}
             duration={isLargeNavSize ? 500 : 0}
             delay={isLargeNavSize ? 300 : 0}
@@ -49,12 +53,15 @@ const Header: FC = () => {
                   </a>
                 </li>
               ))}
+              <li onClick={closeOnClick}>
+                <Theme />
+              </li>
             </ul>
           </Fade>
         </nav>
 
         <div className={styles.nav_btn}>
-          <Fade triggerOnce duration={1000}>
+          <Fade duration={1000}>
             <MobileMenu
               open={menuOpen}
               onClick={toggleMenu}

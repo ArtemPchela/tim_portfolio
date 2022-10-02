@@ -1,11 +1,14 @@
 import { FC } from 'react'
+import { ThemeProvider } from 'next-themes'
 import Header from '@/components/header/Header'
 
 const Layout: FC = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
+      <ThemeProvider>
+        <Header />
+        {children}
+      </ThemeProvider>
     </>
   )
 }

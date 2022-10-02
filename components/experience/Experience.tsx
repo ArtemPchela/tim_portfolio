@@ -8,7 +8,7 @@ import { experienceData } from '@/components/helpers/data/experienceData'
 const Experience: FC = () => {
   return (
     <div className={styles.experience}>
-      <Fade triggerOnce direction='up'>
+      <Fade direction='up'>
         <Title title='Experience' />
       </Fade>
         {experienceData && experienceData.map((props, index) => (

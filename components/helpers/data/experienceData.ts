@@ -2,7 +2,7 @@ import { ExperienceProps } from '@/components/experience/exp/Exp'
 
 export const experienceData: ExperienceProps[] = [
   {
-    year: '2021 - 2022 (6 months)',
+    year: '2021 - 2022',
     company: 'SWEDCONE18 AB',
     location: 'Stockholm, Sweden',
     position: 'Junior Front-End Developer',
@@ -15,7 +15,7 @@ export const experienceData: ExperienceProps[] = [
     direction: 'left'
   },
   {
-    year: '2021 - 2021 (6 months)',
+    year: '2021 - 2021',
     company: 'Spacept AB',
     location: 'Stockholm, Sweden',
     position: 'Junior Front-end Developer',
@@ -26,7 +26,7 @@ export const experienceData: ExperienceProps[] = [
     direction: 'right'
   },
   {
-    year: '2018 - 2019 (10 months)',
+    year: '2018 - 2019',
     company: 'IT Academy Step Belarus',
     location: 'Minsk, Belarus',
     position: 'Junior Front-End Developer',

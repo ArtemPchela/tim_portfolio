@@ -7,6 +7,14 @@ export const projectsData: ProjectProps[] = [
     technologies: ['React', 'CSS', 'i18n', 'PWA'],
     github: 'https://github.com/ArtemPchela/Rovarspraket_Game',
     demo: 'https://rovarspraketgame.netlify.app/',
-    screen: '/rovarsproket.jpg'
+    pic: '/projects/rovarsproket.jpg'
   },
+  {
+    title: 'SCB-React-API',
+    description: 'Smaller SCB-React-API version of the original SCB (Statistiska centralbyrn). There is a wealth of knowledge nearby regarding what you require: "Democracy", "Culture and leisure", "Research and education" and more.',
+    technologies: ['React', 'SCSS', 'Axios', 'Bootstrap', 'React-Bootstrap'],
+    github: 'https://github.com/ArtemPchela/SCB_React_API',
+    demo: 'https://scb-react-api.netlify.app/',
+    pic: '/projects/scb.svg'
+  }
 ]

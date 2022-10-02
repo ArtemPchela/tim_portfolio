@@ -28,9 +28,10 @@
       }
 
       &_description {
-        background-color: var(--color-background-alt);
+        background-color: var(--color-background-header);
         border-radius: 4px;
         padding: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
       }
 
       &_tech {
@@ -38,21 +39,31 @@
         flex-wrap: wrap;
         gap: 1rem;
         font-style: italic;
+        margin-top: 1rem;
+        li {
+          text-decoration: underline;
+        &:nth-child(1) {
+          text-decoration: none;
+        }
+        }
+
       }
 
       .links {
         display: flex;
         align-items: center;
+        justify-content: right;
+        text-align: right;
         gap: 1em;
 
         a {
-          color: var(--color-text-normal);
+          color: var(--color-icons);
           display: flex;
-          font-size: 1.25rem;
+          font-size: 1.45rem;
 
           &:hover,
           &:focus-visible {
-            color: var(--color-primary);
+            color: var(--color-icons-hover);
           }
         }
       }
@@ -100,7 +111,7 @@
 
     @include mixins.min-mq(xl) {
       .project_content {
-        grid-column: 7 / -2;
+        grid-column: 7 / 0;
       }
 
       .project_image {
@@ -125,7 +136,7 @@
 
       @include mixins.min-mq(xl) {
         .project_content {
-          grid-column: 2 / 7;
+          grid-column: 0 / 7;
         }
 
         .project_image {

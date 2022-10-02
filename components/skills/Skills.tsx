@@ -8,7 +8,7 @@ import { skillsData } from '@/components/helpers/data/skillsData'
 const Skills: FC = () => {
   return (
     <div className={styles.skills}>
-      <Fade triggerOnce={true} direction='up'>
+      <Fade direction='up'>
         <Title title='Skills' />
       </Fade>
       <div className={styles.skill_wrapper}>

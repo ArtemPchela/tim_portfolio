@@ -8,26 +8,28 @@ import Contact from '@/components/contact/Contact'
 
 export const Landing: FC = () => {
   return (
-    <main id='main'>
-      <section id='home'>
-        <Home />
-      </section>
-      <section id='about'>
-        <About />
-      </section>
-      <section id='skills'>
-        <Skills />
-      </section>
-      <section id='projects'>
-        <Projects />
-      </section>
-      <section id='experience'>
-        <Experience />
-      </section>
-      <section id='contact'>
-        <Contact />
-      </section>
-    </main>
+    <>
+      <main id='main'>
+        <section id='home'>
+          <Home />
+        </section>
+        <section id='about'>
+          <About />
+        </section>
+        <section id='skills'>
+          <Skills />
+        </section>
+        <section id='projects'>
+          <Projects />
+        </section>
+        <section id='experience'>
+          <Experience />
+        </section>
+        <section id='contact'>
+          <Contact />
+        </section>
+      </main>
+    </>
   )
 }
 

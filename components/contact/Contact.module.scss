@@ -15,18 +15,18 @@
 
     a {
       font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-      color: var(--color-text-normal);
+      color: var(--color-icons);
       display: flex;
       gap: 0.5em;
 
       &:hover {
-        color: var(--color-primary);
+        color: var(--color-icons-hover);
       }
     }
   }
 
   .copy {
-    border-top: 2px solid var(--color-text-normal);
+    border-top: 2px solid var(--color-icons);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,10 +37,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      &_icon {
-        margin-right: .2rem;
-      }
     }
 
     .made {
@@ -57,7 +53,7 @@
         font-size: .8rem;
 
         &_c {
-          color: white;
+          color: var(--color-primary);
         }
       }
 

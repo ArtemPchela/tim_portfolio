@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Fade } from 'react-awesome-reveal'
 import styles from './Project.module.scss'
 import { FaGithub } from 'react-icons/fa'
-import { VscGoToFile } from 'react-icons/vsc'
+import { CgWebsite } from 'react-icons/cg'
 
 export type ProjectProps = {
   title: string
@@ -11,15 +11,15 @@ export type ProjectProps = {
   technologies: string[]
   github: string
   demo: string
-  screen: string
+  pic: string
   direction?: 'left' | 'right'
 }
 
 const Project: FC<ProjectProps> = (props) => {
-  const { title, description, technologies, github, demo, screen, direction = 'left' } = props
+  const { title, description, technologies, github, demo, pic, direction = 'left' } = props
 
   return (
-    <Fade className={styles.project} triggerOnce direction={direction}>
+    <Fade className={styles.project} direction={direction}>
       <div className={styles.project_wrapper}>
         <div className={styles.project_content}>
           <a
@@ -30,18 +30,23 @@ const Project: FC<ProjectProps> = (props) => {
           >
             {title}
           </a>
-          <div className={styles.project_content_description}>{description}</div>
-          <ul className={styles.project_content_tech}>
-            {technologies.map((tech, index) => (
-              <li key={index}>{tech}</li>
-            ))}
-          </ul>
+          <div className={styles.project_content_description}>
+            <p>
+              {description}
+            </p>
+            <ul className={styles.project_content_tech}>
+              <li>Stack:</li>
+              {technologies.map((tech, index) => (
+                <li key={index}>{tech}</li>
+              ))}
+            </ul>
+          </div>
           <div className={styles.links}>
             <a href={github} target='_blank' rel='noreferrer'>
               <FaGithub />
             </a>
             <a href={demo} target='_blank' rel='noreferrer'>
-              <VscGoToFile />
+              <CgWebsite />
             </a>
           </div>
         </div>
@@ -53,11 +58,10 @@ const Project: FC<ProjectProps> = (props) => {
         >
           <Image
             loading='eager'
-            src={screen}
+            src={pic}
             alt={`${title} image`}
-            width={700}
+            width={600}
             height={500}
-            // layout="fill"
             objectFit='cover'
           />
         </a>

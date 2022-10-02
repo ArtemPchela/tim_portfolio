@@ -3,16 +3,16 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head>
           <meta
-            name="description"
-            content="Tim Front-end developer"
+            name='description'
+            content='Tim Front-end developer'
           />
         </Head>
         <body>
-          <Main />
-          <NextScript />
+        <Main />
+        <NextScript />
         </body>
       </Html>
     )

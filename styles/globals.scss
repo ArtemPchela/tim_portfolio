@@ -57,52 +57,6 @@
   url('../fonts/anek-gurmukhi-v2-latin-700.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
 }
 
-/* CSS Variables */
-:root {
-  /*Colors*/
-  /*Hover*/
-  --color-primary: #aede23;
-
-  /*Scroll*/
-  --color-scroll-thumb: #ffffff;
-  //--color-scroll-thumb-hover: #aede23;
-  /*Header*/
-  --color-background-alt: #2F2D2E;
-
-  /*Title*/
-  --color-text-home: #ffffff;
-
-  /*Greeting*/
-  --color-text-subheading: #aede23;
-
-  /*Profession description*/
-  --color-text-normal: #60d4ee;
-
-  /*Background body*/
-  --color-background: #2E2E3A;
-  --transition-color: 5 linear;
-
-  /* Fonts */
-  --font-family-body: 'Anek Gurmukhi', 'San Francisco', 'SF Pro Text', -apple-system,
-  system-ui, sans-serif;
-
-  /*********** Padding ***********/
-  --body-horizontal-padding: 1.5rem;
-
-  @include mixins.min-mq(md) {
-    --body-horizontal-padding: 3rem;
-  }
-
-  @include mixins.min-mq(lg) {
-    --body-horizontal-padding: 6rem;
-  }
-
-  @include mixins.min-mq(xl) {
-    --body-horizontal-padding: 10rem;
-  }
-}
-
-/* Base Styles */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -130,6 +84,60 @@ main {
   }
 }
 
+/* CSS Variables */
+/*Colors*/
+:root {
+  --color-primary: #aede23;
+  --color-primary-hover: #20c2d7;
+  --color-scroll-thumb: #20c2d7;
+  --color-background-header: #2F2D2E;
+  --color-background-header-link: #aede23;
+  --color-text-home: #ffffff;
+  --color-text-subheading: #aede23;
+  --color-text-normal: #20c2d7;
+  --color-exp-line: #20c2d7;
+  --color-background: #2E2E3A;
+  --color-dot: #fc8508;
+  --color-icons: #20c2d7;
+  --color-icons-hover: #aede23;
+  --transition-color: .5s linear;
+  --font-family-body: 'Anek Gurmukhi', 'San Francisco', 'SF Pro Text', -apple-system,
+  system-ui, sans-serif;
+
+  /*********** Padding ***********/
+  --body-horizontal-padding: 1.5rem;
+
+  @include mixins.min-mq(md) {
+    --body-horizontal-padding: 3rem;
+  }
+
+  @include mixins.min-mq(lg) {
+    --body-horizontal-padding: 6rem;
+  }
+
+  @include mixins.min-mq(xl) {
+    --body-horizontal-padding: 10rem;
+  }
+}
+
+[data-theme='dark'] {
+  --color-primary: #fc8508;
+  --color-primary-hover: #fc8508;
+  --color-scroll-thumb: #fc8508;
+  --color-background-header: #ffffff;
+  --color-background-header-link: #2F2D2E;
+  --color-text-home: #6fa8dc;
+  --color-exp-line: #fc8508;
+  --color-text-subheading: #100f0f;
+  --color-text-normal: #1a1818;
+  --color-background: #ffffff;
+  --color-dot: #6fa8dc;
+  --color-icons: #fc8508;
+  --color-icons-hover: #6fa8dc;
+  --transition-color: .5s linear;
+}
+
+/* Base Styles */
 button {
   all: unset;
   cursor: pointer;
@@ -148,17 +156,14 @@ img {
   height: auto;
 }
 
-::selection {
-  background-color: var(--color-selection-background);
-  color: var(--color-selection-text);
-}
-
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.75rem;
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-scroll-thumb);
-  border-radius: 0.5rem;
+  //border-radius: 0.75rem;
 }
+
+/*----------*/

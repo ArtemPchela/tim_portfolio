@@ -15,7 +15,7 @@ const Exp: FC<ExperienceProps> = (props) => {
   const { year, company, location, position, description, direction = 'right' } = props
 
   return (
-    <Fade triggerOnce direction={direction}>
+    <Fade direction={direction}>
       <div key={company} className={`${styles.container} ${styles.experience_wrapper}`}>
         <div className={`${styles.timeline_block} ${styles[direction]}`}>
           <div className={styles.marker} />

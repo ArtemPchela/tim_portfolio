@@ -7,10 +7,10 @@
   left: 0;
   z-index: 100;
   padding: 0 var(--body-horizontal-padding);
-  background-color: var(--color-background-alt);
+  background-color: var(--color-background-header);
   transition: background-color var(--transition-color);
   box-shadow: 0 0.025rem 0 0 var(--color-primary);
-  filter: drop-shadow(0 7px 7px rgba(0,0,0,0.7));
+  filter: drop-shadow(0 7px 7px rgba(0, 0, 0, 0.7));
   --header-height: 85px;
 
   &_container {
@@ -23,17 +23,30 @@
         li {
           font-weight: 700;
           letter-spacing: 0.055rem;
+
           a {
+            position: relative;
             padding: 0.5rem;
-            color: var(--color-text-home);
+            color: var(--color-background-header-link);
+            &:after {
+              content: "";
+              height: 100%;
+              left: 0;
+              top: 0;
+              width: 0;
+              position: absolute;
+              transition: all 0.3s ease 0s;
+              -webkit-transition: all 0.3s ease 0s;
+              z-index: -1;
+            }
 
             &.active_link {
-              color: var(--color-primary);
+              color: var(--color-primary-hover);
             }
 
             &:hover {
               transition: 2ms ease-in;
-              border-bottom: 0.125rem solid var(--color-primary);
+              border-bottom: 0.125rem solid var(--color-primary-hover);
             }
           }
         }
@@ -54,7 +67,7 @@
         left: 0;
         width: 100%;
         height: var(--header-height);
-        background-color: var(--color-background-alt);
+        background-color: var(--color-background-header);
         transition: background-color var(--transition-color);
       }
 
@@ -65,7 +78,7 @@
         left: 0;
         width: 100%;
         padding: 1.25rem 1.5rem 2rem;
-        background-color: var(--color-background-alt);
+        background-color: var(--color-background-header);
         box-shadow: 0 -1px 4px rgb(0 0 0 / 15%);
         transform: translateY(calc(-100vh + var(--header-height)));
         transition: transform 400ms ease-in-out;
@@ -75,16 +88,20 @@
         }
 
         &.close {
-          ul li a {
-            animation: hide-visibility 400ms ease-in-out forwards;
+          ul {
+            li {
+              a {
+                animation: hide-visibility 400ms ease-in-out forwards;
 
-            @keyframes hide-visibility {
-              99% {
-                visibility: visible;
-              }
+                @keyframes hide-visibility {
+                  99% {
+                    visibility: visible;
+                  }
 
-              100% {
-                visibility: hidden;
+                  100% {
+                    visibility: hidden;
+                  }
+                }
               }
             }
           }
@@ -95,10 +112,17 @@
           flex-direction: column;
           gap: 1rem;
 
-          li a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+          li {
+            a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              &:hover {
+                transition: 2ms ease-in;
+                border-bottom: none;
+                color: var(--color-primary);
+              }
+            }
           }
         }
       }

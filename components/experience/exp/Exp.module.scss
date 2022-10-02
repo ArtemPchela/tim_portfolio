@@ -13,23 +13,9 @@
     margin-left: -0.135rem;
     width: 0.31rem;
     height: 100%;
-    background-color: white;
+    background-color: var(--color-exp-line);
     z-index: 1;
   }
-
-  //&::after {
-  //  position: absolute;
-  //  content: "";
-  //  top: 0;
-  //  left: 50%;
-  //  margin-left: -.04rem;
-  //  width: 0.1rem;
-  //  height: 100%;
-  //  border-radius: 50%;
-  //  background-color: red;
-  //  animation: blinkingBackground 4s infinite;
-  //  z-index: 1;
-  //}
 }
 
 .timeline_block {
@@ -53,8 +39,8 @@
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 0.2rem solid white;
-  animation: blinkingBackground 3s infinite ease-out alternate;
+  border: 0.2rem solid var(--color-exp-line);
+  animation: blinkingBackground 2s infinite ease-in-out alternate;
   z-index: 3;
 }
 
@@ -64,7 +50,7 @@
     background-color: white;
   }
   100% {
-    background-color: red;
+    background-color: var(--color-dot);
   }
   0% {
     background-color: white;
@@ -94,6 +80,10 @@
   .position {
     color: var(--color-text-home)
   }
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
 }
 
 @include mixins.max-width-query(md) {
@@ -116,7 +106,7 @@
   }
 
   .right {
-    float: none;
+    //float: none;
   }
 
   .left {

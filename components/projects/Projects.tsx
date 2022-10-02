@@ -8,7 +8,7 @@ import {projectsData} from '@/components/helpers/data/projectsData';
 const Projects: FC = () => {
   return (
     <div className={styles.projects}>
-      <Fade triggerOnce direction='up'>
+      <Fade direction='up'>
         <Title title='Projects' />
       </Fade>
       <div className={styles.projects_list}>

@@ -6,7 +6,7 @@ import Title from '@/components/helpers/title/Title'
 const About: FC = () => {
   return (
     <div className={styles.about}>
-      <Fade triggerOnce direction='up'>
+      <Fade direction='up'>
         <Title title='About' />
         <div className={styles.container}>
           <div className={styles.about_text}>
@@ -19,7 +19,7 @@ const About: FC = () => {
             <p>
               I humbly submit that I possess the skills and qualities required for this position.
               On the one hand, I possess personal qualities such as problem-solving, hard work, critical thinking,
-              attention to detail, quick learning, supportive, goal-oriented, friendly,
+              attention to detail, like learning new things, supportive, goal-oriented, friendly,
               time management, stress-resistance, teamwork, and analytical thinking.
             </p>
             <p>
