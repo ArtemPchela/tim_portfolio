@@ -12,7 +12,7 @@ const Home: FC = () => {
   })
 
   function handleClick() {
-    window.open('/files/artsiom_CV.docx.pdf', '_blank')
+    window.open('/files/artsiom_CV.pdf', '_blank')
   }
 
   return (
