@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 5rem;
+  position: relative;
 
   @include mixins.min-mq(md) {
     flex-direction: row;

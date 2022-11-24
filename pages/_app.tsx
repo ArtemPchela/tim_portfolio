@@ -23,7 +23,6 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         {[400, 500, 600, 700].map((weight) => (
           <link
             key={weight}
-            // rel='preload'
             href={`/font/anek-gurmukhi-v2-latin-${weight}.woff2`}
             as='font'
             type='font/woff2'

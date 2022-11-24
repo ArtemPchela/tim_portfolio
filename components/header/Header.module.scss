@@ -19,6 +19,7 @@
     justify-content: space-between;
 
     .nav_menu {
+      align-items: center;
       ul {
         li {
           font-weight: 700;
@@ -46,7 +47,7 @@
 
             &:hover {
               transition: 2ms ease-in;
-              border-bottom: 0.125rem solid var(--color-primary-hover);
+              color: var(--color-primary-hover);
             }
           }
         }

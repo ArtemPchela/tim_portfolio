@@ -3,8 +3,8 @@ import Home from '@/components/home/Home'
 import About from '@/components/about/About'
 import Skills from '@/components/skills/Skills'
 import Experience from '@/components/experience/Experience'
-import Projects from '@/components/projects/Projects'
 import Contact from '@/components/contact/Contact'
+import SwiperProjects from '@/components/projects/SwiperProjects'
 
 export const Landing: FC = () => {
   return (
@@ -20,7 +20,7 @@ export const Landing: FC = () => {
           <Skills />
         </section>
         <section id='projects'>
-          <Projects />
+          <SwiperProjects />
         </section>
         <section id='experience'>
           <Experience />

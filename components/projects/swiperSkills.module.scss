@@ -1,0 +1,176 @@
+.projects {
+  &_wrapper {
+    width: 100%;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+
+    .projects_tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &_tab {
+        text-align: center;
+        margin-left: 1rem;
+        border-radius: 5rem;
+        cursor: pointer;
+        padding: 12px 10px 7px 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &_active {
+          padding: 12px 10px 7px 10px;
+          margin-left: 1rem;
+          border: 1px solid var(--color-scroll-thumb);
+          border-radius: 5rem;
+          color: var(--color-scroll-thumb);
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .tab_active {
+        padding: 12px 10px 7px 10px;
+        margin-left: 1rem;
+        border: 1px solid var(--color-scroll-thumb);
+        border-radius: 5rem;
+        color: var(--color-scroll-thumb);
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+    }
+
+
+    .swiper {
+      //position: relative;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      :global(.swiper-slide) {
+        //border: 1px solid var(--color-scroll-thumb);
+        //box-shadow: 0 0 0.5rem var(--color-scroll-thumb);
+        -webkit-transition: 200ms ease-in-out;
+        -moz-transition: 200ms ease-in-out;
+        -ms-transition: 200ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        transition: 200ms ease-in-out;
+        scale: 0.8;
+      }
+
+      :global(.swiper-slide-active) {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        //border: 2px solid var(--color-scroll-thumb);
+        box-shadow: 0 0 0.5rem var(--color-scroll-thumb);
+        -webkit-transition: 200ms ease-in-out;
+        -moz-transition: 200ms ease-in-out;
+        -ms-transition: 200ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        transition: 200ms ease-in-out;
+        scale: 1;
+        z-index: 5;
+      }
+
+      :global(.swiper-pagination-bullet) {
+        background: var(--color-dot);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: .5rem;
+        opacity: 1;
+        -webkit-transition: 200ms ease-in-out;
+        -moz-transition: 200ms ease-in-out;
+        -ms-transition: 200ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        transition: 200ms ease-in-out;
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+        background-color: var(--color-exp-line);
+        width: 1.2rem;
+        height: .75rem;
+        border-radius: .5rem;
+        -webkit-transition: 200ms ease-in-out;
+        -moz-transition: 200ms ease-in-out;
+        -ms-transition: 200ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        transition: 200ms ease-in-out;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-color: var(--color-background-revers);
+        position: relative;
+        font-weight: 700;
+        width: 300px;
+        height: 300px;
+        color: var(--color-background);
+        padding: 0.5rem;
+        border-radius: 0.75rem;
+
+        .project {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+          margin: 0 auto;
+
+          &_title {
+            margin-bottom: 1rem;
+          }
+
+          &_description {
+            &_title {
+             margin-top: 0.5rem;
+            }
+          }
+
+          .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-style: italic;
+            //margin-top: 1rem;
+            text-decoration: underline;
+
+            &:nth-child(1) {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .links {
+          position: absolute;
+          bottom: -20px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &_all {
+            color: var(--color-background);
+
+            &:hover {
+              color: var(--color-exp-line);
+            }
+
+            &_git {
+
+            }
+
+            &_demo {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

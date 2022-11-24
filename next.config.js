@@ -1,4 +1,8 @@
+let path = require('path')
 module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')]
+  },
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
@@ -9,8 +13,8 @@ module.exports = {
           name: '[path][name].[ext]'
         }
       }
-    });
-    return config;
+    })
+    return config
   },
   async headers() {
     return [

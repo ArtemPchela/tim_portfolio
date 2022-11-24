@@ -2,15 +2,10 @@ import { FC } from 'react'
 import Image from 'next/image'
 import photo from '../../public/artsiom.png'
 import { Fade } from 'react-awesome-reveal'
-import { useMediaQuery } from 'react-responsive'
 import styles from './Home.module.scss'
 import { FaDownload } from 'react-icons/fa'
 
 const Home: FC = () => {
-  const isLargeNavSize = useMediaQuery({
-    query: '(min-width: 48em)'
-  })
-
   function handleClick() {
     window.open('/files/artsiom_CV.pdf', '_blank')
   }
@@ -19,11 +14,10 @@ const Home: FC = () => {
     <div className={styles.home}>
       <div className={styles.home_text}>
         <Fade
+          direction='bottom-left'
+          delay={1e2}
           cascade
-          direction='up'
-          damping={0.5}
-          duration={500}
-          delay={isLargeNavSize ? 800 : 200}
+          damping={1e-1}
         >
           <div className={styles.greeting}>Hello!</div>
           <div className={styles.title}>My name is Artsiom,</div>
@@ -44,11 +38,10 @@ const Home: FC = () => {
       <div className={styles.home_image}>
         <div>
           <Fade
+            direction='top-left'
+            delay={1e2}
             cascade
-            direction='down'
-            damping={0.5}
-            duration={150}
-            delay={isLargeNavSize ? 800 : 200}
+            damping={1e-1}
           >
             <Image src={photo}
                    alt='Picture of the author'

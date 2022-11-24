@@ -1,12 +1,11 @@
-import { useState, MouseEvent, FC } from 'react'
+import { FC, MouseEvent, useState } from 'react'
 import { Fade } from 'react-awesome-reveal'
 import { useMediaQuery } from 'react-responsive'
 import styles from './Header.module.scss'
 import MobileMenu from '@/components/header/mobileMenu/MobileMenu'
 import Logo from '@/components/helpers/logo/Logo'
-import { mobileMenu } from '@/components/helpers/data/menuData'
 import useScrollActiveLink from '@/components/helpers/hooks/useScrollActiveLink'
-import Theme from '@/components/theme/Theme'
+import HeaderMenu from '@/components/header/HeaderMenu'
 
 const Header: FC = () => {
   useScrollActiveLink(styles.nav_menu, styles.active_link)
@@ -45,18 +44,10 @@ const Header: FC = () => {
             duration={isLargeNavSize ? 500 : 0}
             delay={isLargeNavSize ? 300 : 0}
           >
-            <ul>
-              {mobileMenu.map((item) => (
-                <li key={item.id}>
-                  <a href={item.href} onClick={handleClickNav}>
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-              <li onClick={closeOnClick}>
-                <Theme />
-              </li>
-            </ul>
+            <HeaderMenu
+              handleClickNav={handleClickNav}
+              closeOnClick={closeOnClick}
+            />
           </Fade>
         </nav>
 
