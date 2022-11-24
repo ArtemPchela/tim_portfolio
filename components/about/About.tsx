@@ -11,17 +11,17 @@ const About: FC = () => {
         <div className={styles.container}>
           <div className={styles.about_text}>
             <p>
-              I want my job to be diverse and changing. As a result, I try to mix up my development and learning by
-              taking on daily challenges. After completing a 10-month Front-end development course, I started my career
-              as a developer. This is a thrilling adventure that has forever changed my life.
+              I want my work to be dynamic and varied. I therefore make an effort to mix up my growth and learning by
+              accepting new challenges every day. I began my job as a developer after completing a 10-month front-end
+              development course. This exciting journey has altered my life.
             </p>
             <p>
-              I possess the skills and qualities required for this position. On the one hand, I have personal qualities
-              such as problem-solving, analytical thinking, attention to detail, learning new things, and being
+              I have the abilities and characteristics needed for this job. On the one side, I have traits like the
+              ability to solve problems, think critically, pay attention to details, learn new things, and be
               supportive.
             </p>
             <p>
-              On the other hand, curious about my skills? Check them out below!
+              On the other side, interested in my abilities ? Look at them down below!
             </p>
           </div>
         </div>
