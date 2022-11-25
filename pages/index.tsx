@@ -4,7 +4,7 @@ import About from '@/components/about/About'
 import Skills from '@/components/skills/Skills'
 import Experience from '@/components/experience/Experience'
 import Contact from '@/components/contact/Contact'
-import SwiperProjects from '@/components/projects/SwiperProjects'
+import Projects from '@/components/projects/Projects'
 
 export const Landing: FC = () => {
   return (
@@ -20,7 +20,7 @@ export const Landing: FC = () => {
           <Skills />
         </section>
         <section id='projects'>
-          <SwiperProjects />
+          <Projects />
         </section>
         <section id='experience'>
           <Experience />

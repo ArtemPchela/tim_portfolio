@@ -6,7 +6,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/swiper-bundle.css'
 import 'swiper/css/thumbs'
-import styles from './swiperSkills.module.scss'
+import styles from './Projects.module.scss'
 import { projectsData } from '@/components/helpers/data/projectsData'
 import Title from '@/components/helpers/title/Title'
 import { Fade } from 'react-awesome-reveal'
@@ -17,7 +17,7 @@ import { motion } from 'framer-motion'
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs, EffectCoverflow])
 // const menuItems = [...new Set(projectsData.map((Val) => Val.category))]
 const allCategories = ['All', ...new Set(projectsData.map(item => item.category))]
-const SwiperProjects = () => {
+const Projects = () => {
   // const [item, setItem] = useState(projectsData)
   // const [active, setActive] = useState(menuItems)
 
@@ -84,8 +84,6 @@ const SwiperProjects = () => {
             <motion.button
               // animate={{ opacity: 1, transition: { duration: 2, delay: 1 } }}
               // initial={{ opacity: 0 }}
-              initial='hidden'
-              exit='hidden'
               layoutId={cat}
               animate='visible'
               custom={(i + 1) * 0.2}
@@ -156,6 +154,7 @@ const SwiperProjects = () => {
           pagination={{
             clickable: true
           }}
+          navigation
           grabCursor={true}
           spaceBetween={5}
           className={styles['swiper']}
@@ -166,7 +165,7 @@ const SwiperProjects = () => {
               <SwiperSlide
                 className={styles['swiper-slide']}
                 key={id}
-                style={{ backgroundImage: `url(${pic})` }}
+                style={{backgroundImage: `url(${pic})`}}
               >
                 <div className={styles.project}>
                   <h3 className={styles.project_title}>
@@ -213,4 +212,4 @@ const SwiperProjects = () => {
   )
 }
 
-export default SwiperProjects
+export default Projects
