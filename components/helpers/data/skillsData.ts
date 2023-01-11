@@ -10,14 +10,14 @@ export const skillsData = {
   ],
   Frameworks: [
     'Next.js',
-    'React Native / Expo CLI',
+    'React Native / Expo CLI'
 
   ],
   Server: [
-  'Node.js',
-  'Express',
-  'MongoDB'
-],
+    'Node.js',
+    'Express',
+    'MongoDB'
+  ],
   Tools: [
     'Git / GitHub',
     'Docker',

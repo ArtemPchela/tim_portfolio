@@ -19,6 +19,7 @@
         border-radius: 5rem;
         cursor: pointer;
         padding: 12px 10px 7px 10px;
+        font-weight: bold;
 
         &:first-child {
           margin-left: 0;
@@ -88,11 +89,11 @@
         background-position-y: bottom;
         background-size: (100px, 100px);
         box-shadow: 0 0 0.5rem var(--color-scroll-thumb);
-        -webkit-transition: 200ms ease-in-out;
-        -moz-transition: 200ms ease-in-out;
-        -ms-transition: 200ms ease-in-out;
-        -o-transition: 200ms ease-in-out;
-        transition: 200ms ease-in-out;
+        -webkit-transition: 500ms ease-in-out;
+        -moz-transition: 500ms ease-in-out;
+        -ms-transition: 500ms ease-in-out;
+        -o-transition: 500ms ease-in-out;
+        transition: 500ms ease-in-out;
         scale: 1;
       }
 

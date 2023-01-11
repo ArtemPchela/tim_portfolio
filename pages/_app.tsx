@@ -1,17 +1,29 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import Layout from '@/components/layout/Layout'
 import '@/styles/globals.scss'
-import ReactGA from 'react-ga'
-
-if (process.browser) {
-  const TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_TRACKING_ID!
-  ReactGA.initialize(TRACKING_ID)
-  ReactGA.pageview(window.location.pathname + window.location.search)
-}
+// import ReactGA from 'react-ga'
+import * as gtag from '../components/helpers/googleAnalytics/gtag';
+import {useRouter} from "next/router";
+//
+// if (process.browser) {
+//   const TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_TRACKING_ID!
+//   ReactGA.initialize(TRACKING_ID)
+//   ReactGA.pageview(window.location.pathname + window.location.search)
+// }
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
+    const router = useRouter();
+    useEffect(() => {
+        const handleRouteChange = (url: URL) => {
+            gtag.pageView(url);
+        };
+        router.events.on("routeChangeComplete", handleRouteChange);
+        return () => {
+            router.events.off("routeChangeComplete", handleRouteChange);
+        };
+    }, [router.events]);
   return (
     <>
       <Head>

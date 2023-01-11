@@ -80,18 +80,17 @@ const Projects = () => {
           <Title title='Projects' />
         </Fade>
         <div className={styles.projects_tabs}>
-          {buttons.map((cat: any, i: number) => (
+          {buttons.map((button: any, index: number) => (
             <motion.button
-              // animate={{ opacity: 1, transition: { duration: 2, delay: 1 } }}
-              // initial={{ opacity: 0 }}
-              layoutId={cat}
+              layoutId={button}
               animate='visible'
-              custom={(i + 1) * 0.2}
+              custom={(index + 1) * 0.2}
               whileHover={{ scale: 1.05 }}
-              key={i}
-              type='button' onClick={() => filter(cat, i)}
-              className={!(i === active) ? `${styles.projects_tabs_tab}` : `${styles.tab_active}`}>
-              {cat}
+              key={index}
+              type='button'
+              onClick={() => filter(button, index)}
+              className={!(index === active) ? `${styles.projects_tabs_tab}` : `${styles.tab_active}`}>
+              {button}
             </motion.button>
           ))}
 
