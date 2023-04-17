@@ -1,28 +1,34 @@
 export const skillsData = {
-  Languages: [
-    'JavaScript',
-    'TypeScript',
-    'HTML',
-    'CSS / module.(s)css'
-  ],
-  Libraries: [
-    'React'
-  ],
-  Frameworks: [
-    'Next.js',
-    'React Native / Expo CLI'
+    'Front-end': [
+        'JavaScript',
+        'TypeScript',
+        'ReactJS',
+        'React Native / expo CLI',
+        'HTML',
+        'Tailwind',
+        'CSS / module.(s)css'
+    ],
+    'Back-End': [
+        'NodeJS',
+        'ExpressJS',
+        'NextJS'
+    ],
+    Frameworks: [
+        'Next.js',
+        'React Native / Expo CLI'
 
-  ],
-  Server: [
-    'Node.js',
-    'Express',
-    'MongoDB'
-  ],
-  Tools: [
-    'Git / GitHub',
-    'Docker',
-    'Agile',
-    'Scrum',
-    'Postman'
-  ]
+    ],
+    'APIs': [
+        'REST API',
+        'useQuery',
+        'Fetch',
+        'Axios'
+    ],
+    Tools: [
+        'Git / GitHub',
+        'Docker',
+        'Agile',
+        'Scrum',
+        'Postman'
+    ]
 }

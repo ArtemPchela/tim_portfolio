@@ -1,33 +1,34 @@
-import { FC } from 'react'
+import {FC} from 'react'
 import styles from './About.module.scss'
-import { Fade } from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 import Title from '@/components/helpers/title/Title'
 
 const About: FC = () => {
-  return (
-    <div className={styles.about}>
-      <Fade direction='up'>
-        <Title title='About' />
-        <div className={styles.container}>
-          <div className={styles.about_text}>
-            <p>
-              I want my work to be dynamic and varied. I therefore make an effort to mix up my growth and learning by
-              accepting new challenges every day. I began my job as a developer after completing a 10-month front-end
-              development course. This exciting journey has altered my life.
-            </p>
-            <p>
-              I have the abilities and characteristics needed for this job. On the one side, I have traits like the
-              ability to solve problems, think critically, pay attention to details, learn new things, and be
-              supportive.
-            </p>
-            <p>
-              On the other side, interested in my abilities ? Look at them down below!
-            </p>
-          </div>
+    return (
+        <div className={styles.about}>
+            <Fade direction='up'>
+                <Title title='About'/>
+                <div className={styles.container}>
+                    <div className={styles.about_text}>
+                        <p>
+                            I strive to keep my work dynamic and varied by taking on new challenges every day, which
+                            allows me to continually grow and learn. My journey as a developer began after completing a
+                            10-month front-end development course, and it has been a truly transformative experience.
+                        </p>
+                        <p>
+                            I possess the essential abilities and traits necessary for this job. I am a skilled problem
+                            solver, capable of thinking critically and paying close attention to detail. I am constantly
+                            seeking out new opportunities to learn and improve, and I am always willing to lend a
+                            helping hand to those in need.
+                        </p>
+                        <p>
+                            On the other side, interested in my abilities? Look at them down below!
+                        </p>
+                    </div>
+                </div>
+            </Fade>
         </div>
-      </Fade>
-    </div>
-  )
+    )
 }
 
 export default About
