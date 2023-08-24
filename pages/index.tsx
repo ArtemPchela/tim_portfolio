@@ -9,23 +9,25 @@ import Projects from '@/components/projects/Projects'
 export const Landing: FC = () => {
   return (
     <>
-      <main id='main'>
-        <section id='home'>
+      <main id="main">
+        <section id="home">
           <Home />
         </section>
-        <section id='about'>
+        <section id="about">
           <About />
         </section>
-        <section id='skills'>
+        <section id="skills">
           <Skills />
         </section>
-        <section id='projects'>
-          <Projects />
-        </section>
-        <section id='experience'>
+      </main>
+      <section id="projects">
+        <Projects />
+      </section>
+      <main id="main">
+        <section id="experience">
           <Experience />
         </section>
-        <section id='contact'>
+        <section id="contact">
           <Contact />
         </section>
       </main>
