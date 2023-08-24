@@ -1,4 +1,4 @@
-@use "../../styles/mixins";
+@use '../../styles/mixins';
 
 .header {
   width: 100%;
@@ -9,37 +9,32 @@
   padding: 0 var(--body-horizontal-padding);
   background-color: var(--color-background-header);
   transition: background-color var(--transition-color);
-  box-shadow: 0 0.025rem 0 0 var(--color-primary);
-  filter: drop-shadow(0 7px 7px rgba(0, 0, 0, 0.7));
   --header-height: 85px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #1a1818;
 
   &_container {
     @include mixins.container;
+    align-items: center;
+    text-align: center;
     display: flex;
     justify-content: space-between;
 
     .nav_menu {
-      align-items: center;
+      align-items: end;
+
       ul {
         li {
-          font-weight: 700;
-          letter-spacing: 0.055rem;
-
           a {
+            margin: 0;
+            padding: 0;
             position: relative;
-            padding: 0.5rem;
             color: var(--color-background-header-link);
-            &:after {
-              content: "";
-              height: 100%;
-              left: 0;
-              top: 0;
-              width: 0;
-              position: absolute;
-              transition: all 0.3s ease 0s;
-              -webkit-transition: all 0.3s ease 0s;
-              z-index: -1;
-            }
+            font-weight: 700;
+            letter-spacing: 0.05rem;
 
             &.active_link {
               color: var(--color-primary-hover);
@@ -111,13 +106,14 @@
         ul {
           display: flex;
           flex-direction: column;
-          gap: 1rem;
+          gap: 1.5rem;
 
           li {
             a {
               display: flex;
               flex-direction: column;
               align-items: center;
+
               &:hover {
                 transition: 2ms ease-in;
                 border-bottom: none;
@@ -132,13 +128,14 @@
     @include mixins.min-mq(md) {
       .nav_menu {
         display: flex;
+        justify-content: space-between;
         margin-left: auto;
-        margin-right: 0.25rem;
 
         ul {
           display: flex;
           align-items: center;
-          column-gap: 0.5rem;
+          column-gap: 1.5rem;
+          margin-right: 0.5rem;
         }
       }
     }
@@ -146,7 +143,7 @@
     @include mixins.min-mq(lg) {
       .nav_menu {
         ul {
-          column-gap: 1rem;
+          column-gap: 1.5rem;
 
           li a {
             font-size: 1rem;

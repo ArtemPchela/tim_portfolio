@@ -1,17 +1,18 @@
-import { FC, MouseEvent, useState } from 'react'
+import React, { FC, MouseEvent, useState } from 'react'
 import { Fade } from 'react-awesome-reveal'
 import { useMediaQuery } from 'react-responsive'
 import styles from './Header.module.scss'
-import MobileMenu from '@/components/header/mobileMenu/MobileMenu'
+import MobileBtn from '@/components/header/mobileMenu/MobileBtn'
 import Logo from '@/components/helpers/logo/Logo'
 import useScrollActiveLink from '@/components/helpers/hooks/useScrollActiveLink'
 import HeaderMenu from '@/components/header/HeaderMenu'
+import Theme from '@/components/theme/Theme'
 
 const Header: FC = () => {
   useScrollActiveLink(styles.nav_menu, styles.active_link)
   const [menuOpen, setMenuOpen] = useState(false)
   const isLargeNavSize = useMediaQuery({
-    query: '(min-width: 48em)'
+    query: '(min-width: 48em)',
   })
 
   const toggleMenu = () => setMenuOpen((prevState) => !prevState)
@@ -22,42 +23,39 @@ const Header: FC = () => {
     setMenuOpen(false)
   }
 
-  const closeOnClick = () => {
-    setMenuOpen(false)
-  }
+  const renderFadeComponent = (
+    children: React.ReactNode,
+    direction?: string,
+  ) => (
+    <Fade
+      direction="down"
+      cascade
+      damping={0.2}
+      duration={isLargeNavSize ? 500 : 0}
+      delay={isLargeNavSize ? 300 : 0}
+    >
+      {children}
+    </Fade>
+  )
 
   return (
     <header className={styles.header}>
       <div className={styles.header_container}>
-        <Fade duration={1000}>
-          <Logo />
-        </Fade>
+        {renderFadeComponent(<Logo />)}
+
         <nav
           className={`${styles.nav_menu} ${
             menuOpen ? styles.open : styles.close
           }`}
         >
-          <Fade
-            direction='down'
-            cascade
-            damping={0.2}
-            duration={isLargeNavSize ? 500 : 0}
-            delay={isLargeNavSize ? 300 : 0}
-          >
-            <HeaderMenu
-              handleClickNav={handleClickNav}
-              closeOnClick={closeOnClick}
-            />
-          </Fade>
+          {renderFadeComponent(<HeaderMenu handleClickNav={handleClickNav} />)}
+          {renderFadeComponent(<Theme />)}
         </nav>
 
         <div className={styles.nav_btn}>
-          <Fade duration={1000}>
-            <MobileMenu
-              open={menuOpen}
-              onClick={toggleMenu}
-            />
-          </Fade>
+          {renderFadeComponent(
+            <MobileBtn menuOpen={menuOpen} toggleMenu={toggleMenu} />,
+          )}
         </div>
       </div>
     </header>

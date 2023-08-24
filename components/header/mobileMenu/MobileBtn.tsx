@@ -2,16 +2,16 @@ import { FC, useState } from 'react'
 import styles from './MobileMenu.module.scss'
 
 type MobileMenuProps = {
-  open: boolean
-  onClick: () => void
+  menuOpen: boolean
+  toggleMenu: () => void
 }
 
-const MobileMenu: FC<MobileMenuProps> = ({ open, onClick }) => {
-  const [toggleMenu, setToggleMenu] = useState(false)
+const MobileBtn: FC<MobileMenuProps> = ({ menuOpen, toggleMenu }) => {
+  const [isToggledMenu, setIsToggledMenu] = useState(false)
 
   const getBurgerMenu = () => {
-    if (toggleMenu) {
-      return open ? styles.open : styles.close
+    if (isToggledMenu) {
+      return menuOpen ? styles.open : styles.close
     } else {
       return ''
     }
@@ -19,11 +19,11 @@ const MobileMenu: FC<MobileMenuProps> = ({ open, onClick }) => {
 
   return (
     <div
-      aria-label='toggle menu'
+      aria-label="toggle menu"
       className={`${styles.mobile_menu} ${getBurgerMenu()}`}
       onClick={() => {
-        setToggleMenu(true)
-        onClick()
+        setIsToggledMenu(true)
+        toggleMenu()
       }}
     >
       <div className={styles.mobile_menu_line} />
@@ -33,4 +33,4 @@ const MobileMenu: FC<MobileMenuProps> = ({ open, onClick }) => {
   )
 }
 
-export default MobileMenu
+export default MobileBtn

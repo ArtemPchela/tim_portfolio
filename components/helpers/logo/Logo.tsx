@@ -5,8 +5,8 @@ import logo from '../../../public/logo.svg'
 
 const LogoTitle: FC = () => {
   return (
-    <a className={styles.logo} href='/pages' aria-label='Home'>
-      <Image src={logo} alt='header logo' />
+    <a className={styles.logo} href="/" aria-label="Home">
+      <Image src={logo} alt="header logo" width={55} height={55} />
     </a>
   )
 }

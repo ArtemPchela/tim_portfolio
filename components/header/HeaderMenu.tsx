@@ -1,8 +1,7 @@
 import React from 'react'
 import { mobileMenu } from '@/components/helpers/data/menuData'
-import Theme from '@/components/theme/Theme'
 
-const HeaderMenu = ({ handleClickNav, closeOnClick }: any) => {
+const HeaderMenu = ({ handleClickNav }: any) => {
   return (
     <ul>
       {mobileMenu.map((item) => (
@@ -12,9 +11,6 @@ const HeaderMenu = ({ handleClickNav, closeOnClick }: any) => {
           </a>
         </li>
       ))}
-      <li onClick={closeOnClick}>
-        <Theme />
-      </li>
     </ul>
   )
 }

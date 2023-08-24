@@ -20,10 +20,23 @@ const Theme = () => {
 
   return (
     <div className={styles.theme}>
-      {theme === 'dark'
-        ? <Image onClick={() => setTheme('light')} src='/theme/light.svg' width={25} height={25} alt='theme icon' />
-        : <Image onClick={() => setTheme('dark')} src='/theme/dark.svg' width={25} height={25} alt='theme icon' />
-      }
+      {theme === 'dark' ? (
+        <Image
+          onClick={() => setTheme('light')}
+          src="/theme/light.svg"
+          width={25}
+          height={25}
+          alt="theme icon"
+        />
+      ) : (
+        <Image
+          onClick={() => setTheme('dark')}
+          src="/theme/dark.svg"
+          width={25}
+          height={25}
+          alt="theme icon"
+        />
+      )}
     </div>
   )
 }

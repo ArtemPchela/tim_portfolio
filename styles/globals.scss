@@ -1,60 +1,11 @@
 @use 'mixins';
 
 /* Fonts */
-/* anek-gurmukhi-v2-latin-400*/
 @font-face {
-  font-family: 'Anek Gurmukhi';
+  font-family: 'Barlow Condensed';
   font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/anek-gurmukhi-v2-latin-400.eot'); /* IE9 Compat Modes */
-  src: local(''),
-  url('../fonts/anek-gurmukhi-v2-latin-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/anek-gurmukhi-v2-latin-400.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-400.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-400.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/anek-gurmukhi-v2-latin-400.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
-}
-
-/* anek-gurmukhi-v2-latin-500 - latin */
-@font-face {
-  font-family: 'Anek Gurmukhi';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/anek-gurmukhi-v2-latin-500.eot'); /* IE9 Compat Modes */
-  src: local(''),
-  url('../fonts/anek-gurmukhi-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/anek-gurmukhi-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-500.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/anek-gurmukhi-v2-latin-500.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
-}
-
-/* anek-gurmukhi-v2-latin-600 */
-@font-face {
-  font-family: 'Anek Gurmukhi';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/anek-gurmukhi-v2-latin-600.eot'); /* IE9 Compat Modes */
-  src: local(''),
-  url('../fonts/anek-gurmukhi-v2-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/anek-gurmukhi-v2-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-600.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/anek-gurmukhi-v2-latin-600.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
-}
-
-/* anek-gurmukhi-v2-latin-700 */
-@font-face {
-  font-family: 'Anek Gurmukhi';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/anek-gurmukhi-v2-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-  url('../fonts/anek-gurmukhi-v2-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/anek-gurmukhi-v2-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-700.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/anek-gurmukhi-v2-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/anek-gurmukhi-v2-latin-700.svg#AnekGurmukhi') format('svg'); /* Legacy iOS */
+  //font-weight: 300;
+  src: url('../fonts/BarlowCondensed-Regular.ttf') format('truetype');
 }
 
 * {
@@ -69,6 +20,7 @@ html {
 
 body {
   font-family: var(--font-family-body);
+  letter-spacing: 0.05rem;
   background-color: var(--color-background);
   color: var(--color-text-normal);
   transition: background-color var(--transition-color),
@@ -91,7 +43,7 @@ main {
   --color-primary-hover: #20c2d7;
   --color-scroll-thumb: #20c2d7;
   --color-background-header: #2F2D2E;
-  --color-background-header-link: #aede23;
+  --color-background-header-link: #ffffff;
   --color-text-home: #ffffff;
   --color-text-subheading: #aede23;
   --color-text-normal: #20c2d7;
@@ -102,8 +54,7 @@ main {
   --color-icons: #20c2d7;
   --color-icons-hover: #aede23;
   --transition-color: .5s linear;
-  --font-family-body: 'Anek Gurmukhi', 'San Francisco', 'SF Pro Text', -apple-system,
-  system-ui, sans-serif;
+  --font-family-body: 'Barlow Condensed', sans-serif;
 
   /*********** Padding ***********/
   --body-horizontal-padding: 1.5rem;
