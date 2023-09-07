@@ -1,12 +1,7 @@
 @use 'mixins';
 
 /* Fonts */
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  //font-weight: 300;
-  src: url('../fonts/BarlowCondensed-Regular.ttf') format('truetype');
-}
+
 
 * {
   box-sizing: border-box;
@@ -116,7 +111,4 @@ img {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-scroll-thumb);
-  //border-radius: 0.75rem;
 }
-
-/*----------*/

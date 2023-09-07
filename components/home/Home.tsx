@@ -12,45 +12,24 @@ const Home: FC = () => {
 
   return (
     <div className={styles.home}>
+      <div className={styles.home_image}>
+        <Image src={photo} alt={'home image'} />
+      </div>
       <div className={styles.home_text}>
-        <Fade
-          direction='bottom-left'
-          delay={1e2}
-          cascade
-          damping={1e-1}
-        >
+        <Fade direction="bottom-left" delay={1e2} cascade damping={1e-1}>
           <div className={styles.greeting}>Hello!</div>
           <div className={styles.title}>My name is Artsiom,</div>
           <h1 className={styles.subtitle}>I am a Front-end Developer.</h1>
           <div className={styles.greet}>Welcome to my webpage.</div>
           <div className={styles.download}>
-
-            <div
-              onClick={handleClick}
-              className={styles.download_link}
-            >
+            <div onClick={handleClick} className={styles.download_link}>
               My CV{' '}
-              <span className={styles.download_link_icon}><FaDownload /></span>
+              <span className={styles.download_link_icon}>
+                <FaDownload />
+              </span>
             </div>
           </div>
         </Fade>
-      </div>
-      <div className={styles.home_image}>
-        <div>
-          <Fade
-            direction='top-left'
-            delay={1e2}
-            cascade
-            damping={1e-1}
-          >
-            <Image src={photo}
-                   alt='Picture of the author'
-                   width={500}
-                   height={500}
-                   layout='intrinsic'
-            />
-          </Fade>
-        </div>
       </div>
     </div>
   )
